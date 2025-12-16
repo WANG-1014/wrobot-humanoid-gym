@@ -98,7 +98,7 @@ class wrobotCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.42]
+        pos = [0.0, 0.0, 0.45]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'left_leg_yaw_joint': 0.,
@@ -171,7 +171,7 @@ class wrobotCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.89
+        base_height_target = 0.42
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning

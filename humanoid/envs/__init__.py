@@ -42,4 +42,4 @@ from humanoid.utils.task_registry import task_registry
 
 
 task_registry.register( "humanoid_ppo", XBotLFreeEnv, XBotLCfg(), XBotLCfgPPO() )
-task_registry.register( "wrobot_ppo", wrobotFreeEnv, wrobotCfg(), wrobotCfgPPO() )
+task_registry.register( "wrobot_humanoid_ppo", wrobotFreeEnv, wrobotCfg(), wrobotCfgPPO() )
