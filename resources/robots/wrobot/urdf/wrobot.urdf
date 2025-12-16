@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wrobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.45544908827094E-06 -3.34039686800125E-07 0.00634866081887352"
+        rpy="0 0 0" />
+      <mass
+        value="0.9865977" />
+      <inertia
+        ixx="0.0019751"
+        ixy="0"
+        ixz="0"
+        iyy="0.0005584"
+        iyz="0"
+        izz="0.0022963" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_leg_yaw_link">
+    <inertial>
+      <origin
+        xyz="-0.0443093289611931 0.0202624834463113 -0.0546231265404663"
+        rpy="0 0 0" />
+      <mass
+        value="0.7916314" />
+      <inertia
+        ixx="0.0012344"
+        ixy="0.0000937"
+        ixz="-0.0002017"
+        iyy="0.0009789"
+        iyz="0.0001406"
+        izz="0.0007732" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.037 -0.0049"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_leg_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.3"
+      upper="0.16"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="left_leg_roll_link">
+    <inertial>
+      <origin
+        xyz="0.0645180494042625 -0.00966371069673642 -6.81067126331427E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.7194376" />
+      <inertia
+        ixx="0.0004821"
+        ixy="0.0000629"
+        ixz="0.0000005"
+        iyy="0.0010512"
+        iyz="-0.0000011"
+        izz="0.0007482" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg_roll_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0425 0.027 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="left_leg_yaw_link" />
+    <child
+      link="left_leg_roll_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.14"
+      upper="0.2"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="left_leg_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.00148319589119643 0.0326062903165774 -0.0625655937723331"
+        rpy="0 0 0" />
+      <mass
+        value="1.9905815" />
+      <inertia
+        ixx="0.0116523"
+        ixy="0.0000104"
+        ixz="0.0002368"
+        iyy="0.0097309"
+        iyz="-0.002718"
+        izz="0.0039459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_leg_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.07722 0.006337 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_leg_roll_link" />
+    <child
+      link="left_leg_pitch_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.75"
+      upper="0.17"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="left_knee_link">
+    <inertial>
+      <origin
+        xyz="-2.4980018054066E-16 8.32667268468867E-17 -0.0902889224751217"
+        rpy="0 0 0" />
+      <mass
+        value="0.2635258" />
+      <inertia
+        ixx="0.0009519"
+        ixy="0"
+        ixz="-0.0000002"
+        iyy="0.0009112"
+        iyz="0"
+        izz="0.0000803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.026996 -0.218"
+      rpy="0 0 0" />
+    <parent
+      link="left_leg_pitch_link" />
+    <child
+      link="left_knee_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.2"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="left_ankle_link">
+    <inertial>
+      <origin
+        xyz="-9.93400948792744E-06 -6.10622663543836E-16 -0.0315560463165203"
+        rpy="0 0 0" />
+      <mass
+        value="0.160037" />
+      <inertia
+        ixx="0.0001194"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002932"
+        iyz="0"
+        izz="0.000341" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/left_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.18"
+      rpy="0 0 0" />
+    <parent
+      link="left_knee_link" />
+    <child
+      link="left_ankle_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="right_leg_yaw_link">
+    <inertial>
+      <origin
+        xyz="-0.0440136868721984 -0.0201218361026562 -0.0543663000835155"
+        rpy="0 0 0" />
+      <mass
+        value="0.800661" />
+      <inertia
+        ixx="0.0012563"
+        ixy="-0.0000966"
+        ixz="-0.0002086"
+        iyy="0.0010007"
+        iyz="-0.0001455"
+        izz="0.000787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.037 -0.0049"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_leg_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.16"
+      upper="0.3"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="right_leg_roll_link">
+    <inertial>
+      <origin
+        xyz="0.064509 0.0096637 -7.6043E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.7194376" />
+      <inertia
+        ixx="0.0004818"
+        ixy="-0.0000627"
+        ixz="0.0000006"
+        iyy="0.0010511"
+        iyz="0.0000012"
+        izz="0.0007484" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg_roll_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0425 -0.027 -0.068"
+      rpy="0 0 0" />
+    <parent
+      link="right_leg_yaw_link" />
+    <child
+      link="right_leg_roll_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.2"
+      upper="0.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="right_leg_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.0014174918921247 -0.0326081025369668 -0.0625698560144227"
+        rpy="0 0 0" />
+      <mass
+        value="1.9905815" />
+      <inertia
+        ixx="0.0116515"
+        ixy="-0.00002"
+        ixz="0.000245"
+        iyy="0.00973"
+        iyz="0.0027174"
+        izz="0.0039459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_leg_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0.07722 -0.006333 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_leg_roll_link" />
+    <child
+      link="right_leg_pitch_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.75"
+      upper="0.17"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="right_knee_link">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 -1.17961196366423E-16 -0.0902889224751217"
+        rpy="0 0 0" />
+      <mass
+        value="0.2635258" />
+      <inertia
+        ixx="0.0009519"
+        ixy="0"
+        ixz="0.0000002"
+        iyy="0.0009112"
+        iyz="0"
+        izz="0.0000803" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.027 -0.218"
+      rpy="0 0 0" />
+    <parent
+      link="right_leg_pitch_link" />
+    <child
+      link="right_knee_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.2"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="right_ankle_link">
+    <inertial>
+      <origin
+        xyz="-9.9340094879552E-06 6.24500451351651E-16 -0.0315560463165201"
+        rpy="0 0 0" />
+      <mass
+        value="0.160037" />
+      <inertia
+        ixx="0.0001194"
+        ixy="0"
+        ixz="0"
+        iyy="0.0002932"
+        iyz="0"
+        izz="0.000341" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_ankle_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wrobot/meshes/right_ankle_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_ankle_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.18"
+      rpy="0 0 0" />
+    <parent
+      link="right_knee_link" />
+    <child
+      link="right_ankle_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="100"
+      velocity="100" />
+  </joint>
+</robot>
