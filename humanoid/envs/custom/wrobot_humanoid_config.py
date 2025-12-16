@@ -98,7 +98,7 @@ class wrobotCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.45]
+        pos = [0.0, 0.0, 0.5]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'left_leg_yaw_joint': 0.,
@@ -116,10 +116,10 @@ class wrobotCfg(LeggedRobotCfg):
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        stiffness = {'leg_roll': 200.0, 'leg_pitch': 350.0, 'leg_yaw': 200.0,
-                     'knee': 350.0, 'ankle': 15}
-        damping = {'leg_roll': 10, 'leg_pitch': 10, 'leg_yaw':
-                   10, 'knee': 10, 'ankle': 10}
+        stiffness = {'leg_roll': 20.0, 'leg_pitch': 35.0, 'leg_yaw': 20.0,
+                     'knee': 35.0, 'ankle': 10}
+        damping = {'leg_roll': 0.3, 'leg_pitch': 0.3, 'leg_yaw':
+                   0.3, 'knee': 0.3, 'ankle': 0.3}
 
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
@@ -171,7 +171,7 @@ class wrobotCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.42
+        base_height_target = 0.45
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
