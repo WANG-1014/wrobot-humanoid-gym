@@ -36,13 +36,21 @@
     </visual>
     <collision>
       <origin
+        xyz="0 0 -0.1"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.3 0.2"/>
+      </geometry>
+    </collision>
+    <!-- <collision>
+      <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://wrobot/meshes/base_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <link
     name="left_leg_yaw_link">
@@ -74,7 +82,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -82,7 +90,7 @@
         <mesh
           filename="package://wrobot/meshes/left_leg_yaw_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="left_leg_yaw_joint"
@@ -132,7 +140,7 @@
           rgba="0.866666666666667 0.909803921568627 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -140,7 +148,7 @@
         <mesh
           filename="package://wrobot/meshes/left_leg_roll_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="left_leg_roll_joint"
@@ -190,7 +198,7 @@
           rgba="0.866666666666667 0.909803921568627 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -198,7 +206,7 @@
         <mesh
           filename="package://wrobot/meshes/left_leg_pitch_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="left_leg_pitch_joint"
@@ -248,7 +256,7 @@
           rgba="0.866666666666667 0.909803921568627 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -256,7 +264,7 @@
         <mesh
           filename="package://wrobot/meshes/left_knee_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="left_knee_joint"
@@ -364,7 +372,7 @@
           rgba="1 1 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -372,7 +380,7 @@
         <mesh
           filename="package://wrobot/meshes/right_leg_yaw_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="right_leg_yaw_joint"
@@ -422,7 +430,7 @@
           rgba="0.86667 0.9098 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -430,7 +438,7 @@
         <mesh
           filename="package://wrobot/meshes/right_leg_roll_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="right_leg_roll_joint"
@@ -480,7 +488,7 @@
           rgba="0.866666666666667 0.909803921568627 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -488,7 +496,7 @@
         <mesh
           filename="package://wrobot/meshes/right_leg_pitch_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="right_leg_pitch_joint"
@@ -538,7 +546,7 @@
           rgba="0.866666666666667 0.909803921568627 1 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -546,7 +554,7 @@
         <mesh
           filename="package://wrobot/meshes/right_knee_link.STL" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="right_knee_joint"
