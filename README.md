@@ -222,3 +222,63 @@ The implementation of Humanoid-Gym relies on resources from [legged_gym](https:/
 ## Any Questions?
 
 If you have any more questions, please contact [support@robotera.com](mailto:support@robotera.com) or create an issue in this repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 我的README
+## 使用自己机器人训练
+配置自己机器人文件：
+/resources/robots/wrobot/*
+/humanoid/envs/custom/wrobot_humanoid_config.py
+/humanoid/envs/custom/wrobot_humanoid_env.py
+/humanoid/envs/__init__.py
+
+## xxxFdd.py
+xxxFdd.py是mujuco显示机器人腿部轨迹的代码
+需要使用Docker，详情请见b站教程
+
+## train训练模型
+使用vscode终端（humanoid环境）
+一、Xbot机器人训练 
+python humanoid/scripts/train.py --task=humanoid_ppo --run_name v1 --headless --num_envs 4096
+  参数说明：
+    --run_name v1 是保存到logs/XBot_ppo对应文件夹的名字 "时间_v1"，建议生成后改名为 "v1"
+    --task=humanoid_ppo
+    --headless 是不开启isaac_gym仿真环境
+    --num_envs 是训练的机器人数目
+二、wrobot机器人训练
+python humanoid/scripts/train.py --task=wrobot_humanoid_ppo --run_name v1 --headless --num_envs 4096
+  参数说明：
+    --run_name v1 是保存到logs/wrobot_ppo对应文件夹的名字 "时间_v1"，建议生成后改名为 "v1"
+    --task=wrobot_humanoid_ppo
+    --headless 是不开启isaac_gym仿真环境
+    --num_envs 是训练的机器人数目
+
+## play导出策略
+一、Xbot机器人play
+python humanoid/scripts/play.py --task=humanoid_ppo --run_name v1
+  注意事项：
+    请修改humanoid_config第259行到对应的model文件夹
+  参数说明：
+    --task=humanoid_ppo
+    --run_name v1 是保存到videos/Xbot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
+二、wrobot机器人play
+python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --run_name v1
+  注意事项：
+    请修改wrobot_humanoid_config第259行到对应的model文件夹
+  参数说明：
+    --task=wrobot_humanoid_ppo
+    --run_name v1 是保存到videos/wrobot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置

@@ -171,7 +171,7 @@ class wrobotCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.45
+        base_height_target = 0.46
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
@@ -205,7 +205,7 @@ class wrobotCfg(LeggedRobotCfg):
             # base pos
             default_joint_pos = 0.5
             orientation = 1.
-            base_height = 0.2
+            base_height = 1.0
             base_acc = 0.2
             # energy
             action_smoothness = -0.002
@@ -255,6 +255,6 @@ class wrobotCfgPPO(LeggedRobotCfgPPO):
         run_name = ''
         # Load and resume
         resume = False
-        load_run = -1  # -1 = last run
+        load_run = "logs/wrobot_ppo_v5_change_height_scale"  # -1 = last run
         checkpoint = -1  # -1 = last saved model
         resume_path = None  # updated from load_run and chkpt
