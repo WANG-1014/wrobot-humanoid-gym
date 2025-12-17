@@ -274,12 +274,14 @@ python humanoid/scripts/play.py --task=humanoid_ppo --load_run v1 --run_name v1
     --task=humanoid_ppo
     --run_name v1 是保存到videos/Xbot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
 二、wrobot机器人play
-python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --run_name v1
+python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --load_run v5_change_height_scale --run_name v5
   参数说明：
     --task=wrobot_humanoid_ppo
+    --load_run 是log/wrobot_ppo对应的训练文件夹名字
     --run_name v1 是保存到videos/wrobot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
 
 
 
 
-python scripts/sim2sim.py --load_model /path/to/logs/XBot_ppo/exported/policies/policy_example.pt
+python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/policy_1.pt
+python humanoid/scripts/sim2sim.py --load_model logs/wrobot_ppo/exported/policies/policy_v4.pt
