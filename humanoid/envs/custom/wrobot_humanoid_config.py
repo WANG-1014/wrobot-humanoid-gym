@@ -255,6 +255,6 @@ class wrobotCfgPPO(LeggedRobotCfgPPO):
         run_name = ''
         # Load and resume
         resume = False
-        load_run = "logs/wrobot_ppo_v5_change_height_scale"  # -1 = last run
+        load_run = -1  # -1 = last run
         checkpoint = -1  # -1 = last saved model
         resume_path = None  # updated from load_run and chkpt

@@ -269,16 +269,17 @@ python humanoid/scripts/train.py --task=wrobot_humanoid_ppo --run_name v1 --head
 
 ## play导出策略
 一、Xbot机器人play
-python humanoid/scripts/play.py --task=humanoid_ppo --run_name v1
-  注意事项：
-    请修改humanoid_config第259行到对应的model文件夹
+python humanoid/scripts/play.py --task=humanoid_ppo --load_run v1 --run_name v1
   参数说明：
     --task=humanoid_ppo
     --run_name v1 是保存到videos/Xbot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
 二、wrobot机器人play
 python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --run_name v1
-  注意事项：
-    请修改wrobot_humanoid_config第259行到对应的model文件夹
   参数说明：
     --task=wrobot_humanoid_ppo
     --run_name v1 是保存到videos/wrobot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
+
+
+
+
+python scripts/sim2sim.py --load_model /path/to/logs/XBot_ppo/exported/policies/policy_example.pt
