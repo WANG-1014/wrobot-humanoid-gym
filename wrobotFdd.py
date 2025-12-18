@@ -99,11 +99,15 @@ for i in range(1000):
     # left foot stance phase set to default joint pos
     if sin_pos_l > 0 :
         sin_pos_l = sin_pos_l * 0
+    if abs(sin_pos_l) < 0.1:
+        sin_pos_l = sin_pos_l * 0
     ref_dof_pos[:, 2] = sin_pos_l * scale_1 - 0.45
     ref_dof_pos[:, 3] = -sin_pos_l * scale_2 + 1.1
     ref_dof_pos[:, 4] = sin_pos_l * scale_1 - 0.6
     # right foot stance phase set to default joint pos
     if sin_pos_r < 0:
+        sin_pos_r = sin_pos_r * 0
+    if abs(sin_pos_r) < 0.1:
         sin_pos_r = sin_pos_r * 0
     ref_dof_pos[:, 7] = -sin_pos_r * scale_1 - 0.45
     ref_dof_pos[:, 8] = sin_pos_r * scale_2 + 1.1

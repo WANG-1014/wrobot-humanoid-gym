@@ -249,6 +249,20 @@ If you have any more questions, please contact [support@robotera.com](mailto:sup
 ## xxxFdd.py
 xxxFdd.py是mujuco显示机器人腿部轨迹的代码
 需要使用Docker，详情请见b站教程
+一、终端运行：
+docker run -it \
+  -v .:/data \
+  -p 7000:7000 \
+  --device=/dev/dri \
+  --group-add video \
+  --volume=/tmp/.X11-unix:/tmp/.X11-unix \
+  --env="DISPLAY=$DISPLAY" \
+  --env="QT_X11_NO_MITSHM=1" \
+  --name=pinU20 \
+  ubuntu20_pino_cro:v0 /bin/bash
+二、终端运行：
+cd ../data
+python3 xxxFdd.py
 
 ## train训练模型
 使用vscode终端（humanoid环境）
@@ -280,8 +294,10 @@ python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --load_run v5_change_
     --load_run 是log/wrobot_ppo对应的训练文件夹名字
     --run_name v1 是保存到videos/wrobot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
 
-
-
-
-python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/policy_1.pt
+## sim2sim迁移到mujoco仿真
+一、Xbot机器人play
+python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/policy_v1.pt
+二、wrobot机器人play
 python humanoid/scripts/sim2sim.py --load_model logs/wrobot_ppo/exported/policies/policy_v4.pt
+
+
