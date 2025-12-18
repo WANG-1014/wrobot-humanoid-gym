@@ -172,8 +172,8 @@ class wrobotCfg(LeggedRobotCfg):
 
     class rewards:
         base_height_target = 0.46
-        min_dist = 0.2
-        max_dist = 0.5
+        min_dist = 0.15
+        max_dist = 0.25
         # put some settings here for LLM parameter tuning
         target_joint_pos_scale = 0.17    # rad
         target_feet_height = 0.06        # m
@@ -190,7 +190,7 @@ class wrobotCfg(LeggedRobotCfg):
             feet_clearance = 1.
             feet_contact_number = 1.2
             # gait
-            feet_air_time = 1.
+            feet_air_time = 1.2
             foot_slip = -0.05
             feet_distance = 0.2
             knee_distance = 0.2

@@ -298,6 +298,6 @@ python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --load_run v5_change_
 一、Xbot机器人play
 python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/policy_v1.pt
 二、wrobot机器人play
-python humanoid/scripts/sim2sim.py --load_model logs/wrobot_ppo/exported/policies/policy_v4.pt
+python humanoid/scripts/sim2sim_wrobot.py --load_model logs/wrobot_ppo/exported/policies/policy_v4.pt
 
 
