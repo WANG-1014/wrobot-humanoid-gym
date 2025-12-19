@@ -299,7 +299,7 @@ python humanoid/scripts/play.py --task=humanoid_ppo --load_run v1 --run_name v1
   --run_name v1 是保存到videos/Xbot_ppo对应文件的名字 时间_v1，我习惯再新建文件夹放置
 二、wrobot机器人play
 ```bash
-python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --load_run v6_change_dist_and_feet_air --run_name v6
+python humanoid/scripts/play.py --task=wrobot_humanoid_ppo --load_run v7_change_pd_limit_torque --run_name v7
 ```
 参数说明：
   --task=wrobot_humanoid_ppo
@@ -313,6 +313,6 @@ python humanoid/scripts/sim2sim.py --load_model logs/XBot_ppo/exported/policies/
 ```
 二、wrobot机器人play
 ```bash
-python humanoid/scripts/sim2sim_wrobot.py --load_model logs/wrobot_ppo/exported/policies/policy_v4.pt
+python humanoid/scripts/sim2sim_wrobot.py --load_model logs/wrobot_ppo/exported/policies/policy_v7.pt
 ```
 

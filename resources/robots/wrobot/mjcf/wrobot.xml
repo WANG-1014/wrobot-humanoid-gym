@@ -45,8 +45,8 @@
             <inertial pos="-1.45545e-06 -3.3404e-07 0.00634866" quat="0.5 0.5 -0.5 0.5" mass="0.986598" diaginertia="0.0022963 0.0019751 0.0005584" />
             <joint name="floating_base_joint" type="free" />
             <site name='imu' size='0.01' pos='0.0 0 0.0' quat='1 0 0 0'/>
-            <!-- <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1 1 1 1" mesh="base_link" /> -->
-            <geom size="0.1 0.15 0.1" pos="0 0 -0.1" type="box" rgba="1 1 1 1" />
+            <geom type="mesh" contype="1" conaffinity="1" group="1" rgba="1 1 1 1" mesh="base_link" />
+            <!-- <geom size="0.1 0.15 0.1" pos="0 0 -0.1" type="box" rgba="1 1 1 1" /> -->
             <body name="left_leg_yaw_link" pos="0 0.037 -0.0049">
                 <inertial pos="-0.0443093 0.0202625 -0.0546231" quat="0.959054 0.223882 0.171257 0.0276412" mass="0.791631" diaginertia="0.00131517 0.00105007 0.000621256" />
                 <joint name="left_leg_yaw_joint" pos="0 0 0" axis="0 0 1" limited="true" range="-0.3 0.16" class="leg_joint_param" />
@@ -102,17 +102,17 @@
         </body>
     </worldbody>
     <actuator>
-    <motor name="left_leg_yaw_joint" joint="left_leg_yaw_joint" gear="1" ctrllimited="true" ctrlrange="-8 8"/>
-    <motor name="left_leg_roll_joint" joint="left_leg_roll_joint" gear="1" ctrllimited="true" ctrlrange="-25 25"/>
-    <motor name="left_leg_pitch_joint" joint="left_leg_pitch_joint" gear="1" ctrllimited="true" ctrlrange="-25 25"/>
-    <motor name="left_knee_joint" joint="left_knee_joint" gear="1" ctrllimited="true" ctrlrange="-40 40"/>
-    <motor name="left_ankle_joint" joint="left_ankle_joint" gear="1" ctrllimited="true" ctrlrange="-27 27"/>
+    <motor name="left_leg_yaw_joint" joint="left_leg_yaw_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
+    <motor name="left_leg_roll_joint" joint="left_leg_roll_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
+    <motor name="left_leg_pitch_joint" joint="left_leg_pitch_joint" gear="1" ctrllimited="true" ctrlrange="-200 200"/>
+    <motor name="left_knee_joint" joint="left_knee_joint" gear="1" ctrllimited="true" ctrlrange="-200 200"/>
+    <motor name="left_ankle_joint" joint="left_ankle_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
     
-    <motor name="right_leg_yaw_joint" joint="right_leg_yaw_joint" gear="1" ctrllimited="true" ctrlrange="-8 8"/>
-    <motor name="right_leg_roll_joint" joint="right_leg_roll_joint" gear="1" ctrllimited="true" ctrlrange="-25 25"/>
-    <motor name="right_leg_pitch_joint" joint="right_leg_pitch_joint" gear="1" ctrllimited="true" ctrlrange="-25 25"/>
-    <motor name="right_knee_joint" joint="right_knee_joint" gear="1" ctrllimited="true" ctrlrange="-40 40"/>
-    <motor name="right_ankle_joint" joint="right_ankle_joint" gear="1" ctrllimited="true" ctrlrange="-27 27"/>
+    <motor name="right_leg_yaw_joint" joint="right_leg_yaw_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
+    <motor name="right_leg_roll_joint" joint="right_leg_roll_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
+    <motor name="right_leg_pitch_joint" joint="right_leg_pitch_joint" gear="1" ctrllimited="true" ctrlrange="-200 200"/>
+    <motor name="right_knee_joint" joint="right_knee_joint" gear="1" ctrllimited="true" ctrlrange="-200 200"/>
+    <motor name="right_ankle_joint" joint="right_ankle_joint" gear="1" ctrllimited="true" ctrlrange="-70 70"/>
     </actuator>
     <sensor>
         

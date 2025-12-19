@@ -201,8 +201,8 @@ if __name__ == '__main__':
             decimation = 10
 
         class robot_config:
-            kps = np.array([20, 35, 20, 35, 10, 20, 35, 20, 35, 10], dtype=np.double)
-            kds = np.array([0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3], dtype=np.double)
+            kps = np.array([50, 50, 70, 50, 40, 50, 50, 70, 50, 40], dtype=np.double)
+            kds = np.array([0.8, 0.8, 1.0, 0.8, 0.8, 0.8, 0.8, 1.0, 0.8, 0.8], dtype=np.double)
             tau_limit = 200. * np.ones(10, dtype=np.double)
 
     policy = torch.jit.load(args.load_model)

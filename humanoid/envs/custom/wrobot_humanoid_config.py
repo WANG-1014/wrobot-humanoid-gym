@@ -116,10 +116,10 @@ class wrobotCfg(LeggedRobotCfg):
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        stiffness = {'leg_roll': 35.0, 'leg_pitch': 50.0, 'leg_yaw': 35.0,
-                     'knee': 50.0, 'ankle': 25}
-        damping = {'leg_roll': 0.6, 'leg_pitch': 0.6, 'leg_yaw':
-                   0.6, 'knee': 0.6, 'ankle': 0.6}
+        stiffness = {'leg_roll': 50.0, 'leg_pitch': 75.0, 'leg_yaw': 50.0,
+                     'knee': 50.0, 'ankle': 40}
+        damping = {'leg_roll': 0.8, 'leg_pitch': 1.0, 'leg_yaw':
+                   0.8, 'knee': 0.8, 'ankle': 0.8}
 
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
